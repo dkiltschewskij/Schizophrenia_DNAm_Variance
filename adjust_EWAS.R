@@ -46,7 +46,7 @@ read.ewas<-function(x){
 ewas<-read.ewas(files)
 
 
-# adjust for Mean effect P value inflation via bacon
+# adjust for P value inflation via bacon
 bc.adj<-function(ew){
   bc.m<-bacon(NULL,ew$Status_Beta,ew$Status_SE)
   ew$Bacon_Status_Beta<-as.numeric(es(bc.m))
